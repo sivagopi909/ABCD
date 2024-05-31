@@ -8,6 +8,8 @@ package org.example;
   System.out.println("The sum is :" +sum);
     }
     public static int add(int a, int b){
+        add Add = new add();
+        System.out.println(add.class);
         return a+b;
     }
 
