@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class DatabaseConnectionBean implements Serializable {
     private static final String url = "jdbc:postgresql://localhost/test";
-    private static final String user = "username";
-    private static final String password = "password";
+    private static final String user = "postgres";
+    private static final String password = "KingViratKohli@183";
     private Connection conn;
 
     public DatabaseConnectionBean() {
@@ -22,5 +22,9 @@ public class DatabaseConnectionBean implements Serializable {
 
     public Connection getConnection() {
         return this.conn;
+    }
+    public static void main(String[] args){
+        DatabaseConnectionBean databaseConnectionBean = new DatabaseConnectionBean();
+        System.out.println(databaseConnectionBean.getConnection());
     }
 }
